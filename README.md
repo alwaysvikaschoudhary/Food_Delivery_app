@@ -1,111 +1,217 @@
-# FoodFrenzy
-FoodFrenzy is a comprehensive system designed for managing customers, inventory, and orders. It offers secure authentication, role-based access control, and database integration using MySQL. Built with Spring Boot and Thymeleaf, the application provides a seamless experience for admin and staff members.
+# 🍽️ FoodFrenzy
 
-![Screenshot 2024-10-02 123332](https://github.com/user-attachments/assets/1382d32f-3cbb-40c3-b6b5-9fc55cd5176f)
+FoodFrenzy is a comprehensive, full-stack food delivery and restaurant management web application. It is designed to provide a seamless ordering experience for customers while equipping administrators with a powerful dashboard to manage products, users, and orders. Built with modern Java technologies, the application boasts a beautiful UI, robust authentication, and dynamic cart functionalities.
 
+---
 
-## Features
+## 🌟 Features
 
-- **Customer Management**: Easily add, update, and delete customer information.
-- **Inventory Management**: Keep track of your inventory items, including stock levels and pricing.
-- **Order Management**: Manage customer orders, including order creation, updates, and status tracking.
-- **User Authentication**: Secure login and authentication for admin and staff members.
-- **Role-Based Access Control**: Define roles and permissions for different user types.
-- **Thymeleaf Templates**: Utilizes Thymeleaf for dynamic HTML templates.
-- **Database Integration**: Integrated with MySQL for data storage and retrieval.
+- **Dynamic Shopping Cart**: Instantly add items, update quantities with AJAX-powered `+` and `-` controls, and see price calculations in real-time without page reloads.
+- **Role-Based Access Control**: Secure login system with distinct privileges for `USER` and `ADMIN` roles.
+- **Admin Dashboard**: Complete CRUD (Create, Read, Update, Delete) capabilities for managing the menu, tracking user accounts, and monitoring all orders.
+- **Cloudinary Image Integration**: Product images are securely uploaded and hosted on Cloudinary, ensuring fast and reliable media delivery.
+- **Order Management & History**: Customers can place orders effortlessly and track their order history via their profile.
+- **Responsive Modern UI**: Designed with an elegant, responsive interface using custom CSS, glassmorphism effects, and smooth animations.
+- **Database Integration**: Powered by PostgreSQL for robust, scalable data persistence.
 
-## Technology Stack
+---
 
-- **Backend**: Spring Boot, Java 8, Spring MVC, Spring Data JPA (Hibernate)
-- **Frontend**: Thymeleaf, HTML, CSS, JavaScript
-- **Database**: MySQL
-- **IDE**: Eclipse, Spring Tool Suite (STS)
+## 🛠️ Tech Stack
 
-## Prerequisites
+### Backend
+- **Java 21**
+- **Spring Boot 3.1** (Spring Web, Spring Data JPA)
+- **Spring Security** (Authentication, Authorization, Password Encryption)
+- **Hibernate / JPA** (ORM)
+- **Cloudinary Java SDK** (Image Storage)
 
-Before running this project, ensure you have the following installed:
+### Frontend
+- **Thymeleaf** (Server-side rendering & templating)
+- **HTML5 & Vanilla CSS3** (Custom Design System)
+- **JavaScript (ES6+)** (AJAX Requests, DOM Manipulation)
+- **FontAwesome** (Icons)
 
-- Java 8
-- MySQL
-- Maven
-- Eclipse or Spring Tool Suite (STS)
+### Database & Environment
+- **PostgreSQL**
+- **Maven** (Dependency Management)
+- **Spring Dotenv** (Environment Variable Management)
 
-## Setup and Installation
-# 🎁 Donate
+---
 
-<a href="https://buymeacoffee.com/1122anuragg">
-  <img src="https://user-images.githubusercontent.com/25067102/154570688-9e143f2b-fee3-4b05-a9d2-a7a3013b2b51.png" />
-<a/>
-1. Clone the repository:
-    ```bash
-    git clone https://github.com/your-repository-url/FoodFrenzy.git
-    ```
+## 📸 Screenshots
 
-2. Navigate to the project directory:
-    ```bash
-    cd FoodFrenzy
-    ```
+### 1. Home Page
+A welcoming landing page featuring our hero section, dynamic design, and quick access navigation links.
+![Home Page](screenshots/screenshot_1.png)
 
-3. Configure MySQL Database:
-    - Create a new MySQL database.
-    - Update `application.properties` with your MySQL credentials:
-      ```properties
-      spring.datasource.url=jdbc:mysql://localhost:3306/foodfrenzy
-      spring.datasource.username=root
-      spring.datasource.password=root
-      spring.jpa.hibernate.ddl-auto=update
-      ```
+### 2. User Registration
+The sign-up page where new customers can create an account securely before ordering.
+![User Registration](screenshots/screenshot_2.png)
 
-4. Run the project:
-    ```bash
-    mvn spring-boot:run
-    ```
+### 3. Login Portal
+A secure login screen for both customers and administrators to access their respective accounts.
+![Login Portal](screenshots/screenshot_3.png)
 
-5. Access the application:
-    - Navigate to `http://localhost:8080` in your browser. 
-## Website Screenshot
+### 4. Delicious Menu
+The primary browsing interface where users can view available food items, descriptions, and prices.
+![Delicious Menu](screenshots/screenshot_4.png)
 
-Here is a preview of the FoodFrenzy interface:
+### 5. Quick Add to Cart
+The AJAX-powered "Add to Cart" functionality providing instant visual feedback without reloading the page.
+![Quick Add to Cart](screenshots/screenshot_5.png)
 
-![Screenshot 2025-05-19 143351](https://github.com/user-attachments/assets/3e34f54c-c986-42ac-96a4-ed7ad18035a6)
-![Screenshot 2025-05-19 143427](https://github.com/user-attachments/assets/a4046d4e-8c3d-4629-8913-5543d709e80e)
-![Screenshot 2025-05-19 143441](https://github.com/user-attachments/assets/09c92348-ec06-4607-9ae4-88b28cc1e0ec)
-![Screenshot 2025-05-19 143452](https://github.com/user-attachments/assets/0e73aece-a28c-413d-9363-245358a0e439)
-![Screenshot 2025-05-19 143504](https://github.com/user-attachments/assets/ac26bd92-0fcd-473d-a175-9bc45fdb12ba)
+### 6. Shopping Cart Interface
+A seamless cart layout where users can review their selected items, images, and prices.
+![Shopping Cart Interface](screenshots/screenshot_6.png)
 
+### 7. Dynamic Quantity Controls
+Users can easily update quantities using the dynamic `+` and `-` buttons, instantly recalculating the subtotal.
+![Dynamic Quantity Controls](screenshots/screenshot_7.png)
 
-![image](https://github.com/user-attachments/assets/3d407958-efbe-449f-b4e1-5b08b9f8a28b)
+### 8. Order Placement & Checkout
+The final order summary displaying item totals, delivery fees, and the main checkout action.
+![Order Placement](screenshots/screenshot_8.png)
 
+### 9. Customer Order History
+A dedicated profile section for customers to view a detailed history of their past orders and current delivery status.
+![Customer Order History](screenshots/screenshot_9.png)
 
-![Screenshot 2024-08-24 194958](https://github.com/user-attachments/assets/c11a4710-69f8-42fd-b9d7-2b5278b2c8a3) 
+### 10. Admin Dashboard - Overview
+The main entry point for the Admin panel, giving quick access to all management tools and metrics.
+![Admin Dashboard Overview](screenshots/screenshot_10.png)
 
+### 11. Admin Panel - User Management
+An interface for administrators to view, update, or remove registered users on the platform.
+![Admin Panel - User Management](screenshots/screenshot_11.png)
 
-![Screenshot 2024-08-24 220831](https://github.com/user-attachments/assets/d3cd3cdd-cda5-460a-a253-24e45cf600b0)  
-![Screenshot 2024-08-24 195054](https://github.com/user-attachments/assets/733afb94-a251-4a6d-86a4-3a124e8c3469)
-![Screenshot 2024-08-24 195106](https://github.com/user-attachments/assets/ef09886f-7936-4ef7-b01e-4da0008fd047) 
-![Screenshot 2024-08-24 195121](https://github.com/user-attachments/assets/219272b8-3938-4b7f-ba78-817e507beee9)
-![Screenshot 2024-10-03 093051](https://github.com/user-attachments/assets/d4da51a4-dfe8-4cc1-ae49-745f6e1ae17a) 
-![Screenshot 2024-10-03 093106](https://github.com/user-attachments/assets/09c31cf7-e960-4ea5-a858-8807317486b7)
-![Screenshot 2024-10-03 093133](https://github.com/user-attachments/assets/b1da1faa-7e71-49be-972a-432029a1e7c3) 
-![Screenshot 2024-10-03 093424](https://github.com/user-attachments/assets/b0a9a1e2-6018-475a-95fc-d64980677ee7) 
-![Screenshot 2024-10-03 093437](https://github.com/user-attachments/assets/b860f905-2c35-4af3-9df8-38cda70b4406)
+### 12. Admin Panel - Inventory & Products
+A powerful table view for administrators to track inventory, view product images, and manage prices.
+![Admin Panel - Inventory & Products](screenshots/screenshot_12.png)
 
-## Project Structure
+### 13. Admin Panel - Product Uploads
+The form where admins can add new menu items and upload product images directly to Cloudinary.
+![Admin Panel - Product Uploads](screenshots/screenshot_13.png)
 
+---
+
+## 🚀 Installation Instructions
+
+Follow these step-by-step instructions to get a local copy up and running.
+
+### Prerequisites
+- **Java 21** installed on your machine.
+- **PostgreSQL** server running locally or remotely.
+- **Maven** installed.
+- A **Cloudinary** account (free tier works perfectly).
+
+### 1. Clone the Repository
 ```bash
-src/
-├── main/
-│   ├── java/
-│   │   └── com.example.foodfrenzy/
-│   │       ├── controller/      # Contains all controllers
-│   │       ├── model/           # Contains entity classes
-│   │       ├── repository/      # Repository interfaces for database interaction
-│   │       └── service/         # Service layer with business logic
-│   ├── resources/
-│   │   ├── templates/           # Thymeleaf templates for views
-│   │   ├── static/              # Static assets (CSS, JavaScript)
-│   │   └── application.properties  # Project configuration
-│   └── webapp/
-│       └── WEB-INF/
-│           └── views/           # Additional view files
-└── test/                        # Test cases for unit testing
+git clone https://github.com/your-username/Food-Delivery-App-main.git
+cd Food-Delivery-App-main
+```
+
+### 2. Configure Environment Variables
+Create a `.env` file in the root directory of the project and add the following properties. Replace the placeholder values with your actual credentials:
+
+```env
+# Database Credentials
+DB_NAME=food
+DB_URL=jdbc:postgresql://localhost:5432/food
+DB_USERNAME=postgres
+DB_PASSWORD=your_db_password
+DB_DRIVER=org.postgresql.Driver
+
+# Admin Configuration
+ADMIN_EMAIL=admin@foodfrenzy.com
+ADMIN_PASSWORD=admin123
+
+# Cloudinary Configuration
+CLOUDINARY_CLOUD_NAME=your_cloud_name
+CLOUDINARY_API_KEY=your_api_key
+CLOUDINARY_API_SECRET=your_api_secret
+
+# Session
+SESSION_TIMEOUT=30m
+```
+
+### 3. Setup the Database
+Create a new PostgreSQL database named `food` (or whatever you specified in `DB_NAME`). Spring Boot will automatically generate the required tables upon startup using `ddl-auto=update`.
+
+### 4. Build and Run the Application
+You can run the application using Maven wrapper:
+```bash
+./mvnw clean install
+./mvnw spring-boot:run
+```
+Alternatively, you can build the `.jar` file and run it:
+```bash
+./mvnw clean package
+java -jar target/FoodFrenzy-0.0.1-SNAPSHOT.jar
+```
+
+---
+
+## 📖 Usage Guide
+
+1. **Access the App**: Open your web browser and navigate to `http://localhost:8080`.
+2. **Customer Flow**:
+   - Register a new account or log in.
+   - Browse the menu and add delicious food to your cart.
+   - Adjust quantities in the cart seamlessly.
+   - Click "Place Order" to finalize your purchase.
+   - View your purchases under the Profile/Order History section.
+3. **Admin Flow**:
+   - Log in using the admin credentials defined in your `.env` file.
+   - Access the Admin Dashboard to add new products, update prices, or upload new images.
+   - View a comprehensive list of all customer orders across the platform.
+
+---
+
+## 📂 Folder Structure
+
+```text
+Food-Delivery-App-main/
+├── src/
+│   ├── main/
+│   │   ├── java/com/example/demo/
+│   │   │   ├── config/          # Cloudinary & Security configurations
+│   │   │   ├── controllers/     # Web & REST Controllers
+│   │   │   ├── entities/        # JPA Entities (Models)
+│   │   │   ├── repositories/    # Spring Data JPA Interfaces
+│   │   │   └── services/        # Business Logic & Cloudinary Uploads
+│   │   └── resources/
+│   │       ├── static/          # CSS styles, JS files, and local Images
+│   │       ├── templates/       # Thymeleaf HTML views
+│   │       └── application.properties # Spring Boot configuration
+├── screenshots/                 # Application preview images
+├── .env                         # Environment variables (Ignored in Git)
+├── pom.xml                      # Maven dependencies
+└── README.md                    # Project documentation
+```
+
+---
+
+## 🔮 Future Improvements
+
+- **Payment Gateway Integration**: Implement Stripe or Razorpay for seamless online transactions.
+- **Live Order Tracking**: Add real-time order status tracking (Preparing, Out for Delivery, Delivered).
+- **Email Notifications**: Send automated order confirmation emails using Spring Boot Mail.
+- **RESTful API Expansion**: Fully decouple the frontend by converting the app into a standalone REST API with a React/Next.js frontend.
+
+---
+
+## 🤝 Contribution Guidelines
+
+Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+---
+
+## 📜 License
+
+Distributed under the MIT License. See `LICENSE` for more information.
